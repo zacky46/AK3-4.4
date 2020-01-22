@@ -6,7 +6,8 @@
 properties() { '
 kernel.string=Mystic Kernel by @okta_10
 do.devicecheck=1
-do.modules=1
+do.modules=0
+do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=whyred
