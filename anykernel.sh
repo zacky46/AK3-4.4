@@ -5,7 +5,7 @@
 # begin properties
 properties() { '
 kernel.string=Mystic Kernel by @okta_10
-do.devicecheck=1
+do.devicecheck=0
 do.modules=0
 do.systemless=1
 do.cleanup=1
