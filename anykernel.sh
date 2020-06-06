@@ -14,7 +14,12 @@ device.name1=whyred
 device.name2=tulip
 device.name3=wayne
 device.name4=ginkgo
-device.name5=
+device.name5=jasmine
+device.name6=jasmine_sprout
+device.name7=lavender
+device.name8=whyded
+device.name9=twolip
+device.name10=willow
 supported.versions=
 supported.patchlevels=
 '; } # end properties
