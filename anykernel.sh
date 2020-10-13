@@ -4,7 +4,8 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Mystic Kernel by @okta_10
+kernel.string=Mystic-Kernel
+dev.string=@okta_10
 do.devicecheck=1
 do.modules=0
 do.systemless=1
