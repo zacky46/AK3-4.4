@@ -274,7 +274,7 @@ do_devicecheck() {
   for testname in $(file_getprop anykernel.sh 'device.name.*'); do
     for devicename in $device $product $vendordevice $vendorproduct; do
       if [ "$devicename" == "$testname" ]; then
-        ui_print "- Device recognised as: $testname";
+        ui_print "- Device recognised as : $testname";
         match=1;
         break 2;
       fi;
@@ -465,7 +465,7 @@ if [ -f banner ]; then
 fi;
 
 KERNEL_STRING="$(file_getprop anykernel.sh kernel.string)";
-ui_print "- Kernel Name: $KERNEL_STRING";
+ui_print "- Kernel Name : $KERNEL_STRING";
 if [ -f version ]; then
   ui_print " ";
   ui_printfile version;
@@ -473,16 +473,14 @@ if [ -f version ]; then
 fi;
 
 DEV_STRING="$(file_getprop anykernel.sh dev.string)";
-ui_print "- Developer Name: $DEV_STRING";
+ui_print "- Developer Name : $DEV_STRING";
 if [ -f version ]; then
   ui_print " ";
   ui_printfile version;
   ui_print " ";
 fi;
 
-ui_print " " "AnyKernel3 by osm0sis @ xda-developers" " ";
 $BB grep -oE 'AK_BASE.*' META-INF/com/google/android/updater-script >&2;
-ui_print " ";
 
 setup_env;
 
