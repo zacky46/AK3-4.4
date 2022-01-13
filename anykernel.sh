@@ -99,6 +99,36 @@ ui_print " "
 ui_print "- NOTE: If the vibration not working or bootloop issue after flashing, please reflash this kernel & select another option Haptic driver. "
 # End select Haptic driver
 
+# Start select wired headphone buttons mode
+if [ -z $WIRED_BTN ]; then
+  FUNCTION=choose
+  ui_print " "
+  ui_print "  Choose which headphone buttons mode: "
+  ui_print "  + Default Mode (For most roms) "
+  ui_print "  - Alternative Mode (For a few roms) "
+  ui_print " "
+  if $FUNCTION; then
+    WIRED_BTN=true
+  else
+    WIRED_BTN=false
+  fi
+else
+  ui_print "- Option specified in zipname! "
+fi
+
+# patching weird headphone buttons
+if $WIRED_BTN; then
+  ui_print "  > Default mode selected"
+  patch_cmdline "androidboot.wiredbtnaltmode" ""
+else
+  ui_print "  > Alternative mode selected"
+  patch_cmdline "androidboot.wiredbtnaltmode" "androidboot.wiredbtnaltmode=1"
+fi
+
+ui_print " "
+ui_print "- NOTE: If headphone buttons not working or response abnormal, please reflash this kernel & select another wired headphone buttons mode. "
+# End select wired headphone buttons mode
+
 write_boot;
 ## end boot install
 
