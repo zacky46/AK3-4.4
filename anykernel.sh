@@ -104,8 +104,8 @@ if [ -z $WIRED_BTN ]; then
   FUNCTION=choose
   ui_print " "
   ui_print "  Choose which headphone buttons mode: "
-  ui_print "  + Default Mode (For most roms) "
-  ui_print "  - Alternative Mode (For a few roms) "
+  ui_print "  + Alternative Mode (For a few roms) "
+  ui_print "  - Default Mode (For most roms) "
   ui_print " "
   if $FUNCTION; then
     WIRED_BTN=true
@@ -118,11 +118,11 @@ fi
 
 # patching weird headphone buttons
 if $WIRED_BTN; then
-  ui_print "  > Default mode selected"
-  patch_cmdline "androidboot.wiredbtnaltmode" ""
-else
   ui_print "  > Alternative mode selected"
   patch_cmdline "androidboot.wiredbtnaltmode" "androidboot.wiredbtnaltmode=1"
+else
+  ui_print "  > Default mode selected"
+  patch_cmdline "androidboot.wiredbtnaltmode" "androidboot.wiredbtnaltmode=0"
 fi
 
 ui_print " "
@@ -134,8 +134,8 @@ if [ -z $CPUCLOCK ]; then
   FUNCTION=choose
   ui_print " "
   ui_print "  Choose which CPU clock speed: "
-  ui_print "  + CPU clock 1.8 GHz "
-  ui_print "  - CPU clock 2.2 GHz "
+  ui_print "  + CPU clock 2.2 GHz "
+  ui_print "  - CPU clock 1.8 GHz "
   ui_print " "
   if $FUNCTION; then
     CPUCLOCK=true
@@ -148,11 +148,11 @@ fi
 
 # patching cpu clock
 if $CPUCLOCK; then
-  ui_print "  > CPU clock 1.8 GHz selected"
-  patch_cmdline "androidboot.cpuclockspeed" ""
-else
   ui_print "  > CPU clock 2.2 GHz selected"
   patch_cmdline "androidboot.cpuclockspeed" "androidboot.cpuclockspeed=1"
+else
+  ui_print "  > CPU clock 1.8 GHz selected"
+  patch_cmdline "androidboot.cpuclockspeed" "androidboot.cpuclockspeed=0"
 fi
 
 ui_print " "
