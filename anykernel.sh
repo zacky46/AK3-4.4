@@ -129,36 +129,6 @@ ui_print " "
 ui_print "- NOTE: If headphone buttons not working or response abnormal, please reflash this kernel & select another wired headphone buttons mode. "
 # End select wired headphone buttons mode
 
-# Start select cpu clock speed
-if [ -z $CPUCLOCK ]; then
-  FUNCTION=choose
-  ui_print " "
-  ui_print "  Choose which CPU clock speed: "
-  ui_print "  + CPU clock 2.2 GHz "
-  ui_print "  - CPU clock 1.8 GHz "
-  ui_print " "
-  if $FUNCTION; then
-    CPUCLOCK=true
-  else
-    CPUCLOCK=false
-  fi
-else
-  ui_print "- Option specified in zipname! "
-fi
-
-# patching cpu clock
-if $CPUCLOCK; then
-  ui_print "  > CPU clock 2.2 GHz selected"
-  patch_cmdline "androidboot.cpuclockspeed" "androidboot.cpuclockspeed=1"
-else
-  ui_print "  > CPU clock 1.8 GHz selected"
-  patch_cmdline "androidboot.cpuclockspeed" "androidboot.cpuclockspeed=0"
-fi
-
-ui_print " "
-ui_print "- NOTE: For whyred & tulip default CPU clock speed is 1.8 GHz, for a26x & lavender default CPU clock speed is 2.2 GHz. "
-# End select cpu clock speed
-
 write_boot;
 ## end boot install
 
