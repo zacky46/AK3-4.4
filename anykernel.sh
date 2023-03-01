@@ -4,8 +4,8 @@
 ### AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Mystic-Kernel
-dev.string=@okta_10
+kernel.string=SuperRyzen-Kernel EAS 4.4 OSS
+dev.string=@TianWalkzzMiku
 do.devicecheck=1
 do.modules=0
 do.systemless=1
@@ -70,7 +70,7 @@ ui_print "  ================================= "
 if [ -z $HAPTIC ]; then
   FUNCTION=choose
   ui_print " "
-  ui_print "  Choose which haptic driver: "
+  ui_print "  Select haptic driver: "
   ui_print "  + QPNP Haptic (For most roms) "
   ui_print "  - QTI Haptic (For a few roms) "
   ui_print " "
@@ -103,7 +103,7 @@ ui_print "- NOTE: If the vibration not working or bootloop issue after flashing,
 if [ -z $WIRED_BTN ]; then
   FUNCTION=choose
   ui_print " "
-  ui_print "  Choose which headphone buttons mode: "
+  ui_print "  Select headphone buttons mode: "
   ui_print "  + Alternative Mode (For a few roms) "
   ui_print "  - Default Mode (For most roms) "
   ui_print " "
