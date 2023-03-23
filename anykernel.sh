@@ -4,16 +4,16 @@
 ### AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Mystic-Kernel
-dev.string=@okta_10
+kernel.string=#DEAGLE-Kernel
+dev.string=@TianWalkzzMiku
 do.devicecheck=1
 do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=whyred
-device.name2=
-device.name3=
+device.name2=tulip
+device.name3=twolip
 device.name4=
 device.name5=
 supported.versions=
