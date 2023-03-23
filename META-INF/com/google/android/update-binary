@@ -274,7 +274,7 @@ do_devicecheck() {
   for testname in $($BB grep '^device.name.*=' anykernel.sh | $BB cut -d= -f2-); do
     for devicename in $device $product $vendordevice $vendorproduct; do
       if [ "$devicename" == "$testname" ]; then
-        ui_print "- Device recognised as : $testname";
+        ui_print "- Ur Device is : $testname";
         match=1;
         break 2;
       fi;
@@ -490,7 +490,7 @@ do_versioncheck;
 do_levelcheck;
 
 ui_print " ";
-ui_print "- Installing Mystic Kernel";
+ui_print "- Installing #DEAGLE Kernel";
 CORE=$($BB grep -oE 'ak.*core.sh' anykernel.sh);
 [ -f tools/$CORE ] || $BB ln -s $AKHOME/tools/ak*-core.sh $AKHOME/tools/$CORE;
 PATH="$AKHOME/bin:$PATH" ZIPFILE="$3" home=$AKHOME $BB ash anykernel.sh $2;
@@ -508,6 +508,6 @@ if [ "$(file_getprop anykernel.sh do.cleanup)" == 1 ]; then
 fi;
 
 ui_print "- Flashed successfully!";
-ui_print "- Thank you for using Mystic Kernel :-) ";
+ui_print "- Welcome To #DEAGLE Reborn :-) ";
 ui_print "- AnyKernel3 by osm0sis @ xda-developers ";
 ui_print " ";
