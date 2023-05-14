@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=SuperRyzen-Kernel EAS 4.4 OSS
+kernel.string=Perf
 dev.string=@zacky46
 do.devicecheck=1
 do.modules=0
