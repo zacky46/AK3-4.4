@@ -4,8 +4,8 @@
 ### AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=SuperRyzen-Kernel EAS 4.4 OSS
-dev.string=@TianWalkzzMiku
+kernel.string=MRT-whyred Kernel by zackyma @ Telegram
+dev.string=@zacky_ma
 do.devicecheck=1
 do.modules=0
 do.systemless=1
