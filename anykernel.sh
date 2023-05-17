@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=MRT-whyred Kernel by zackyma @ Telegram
+kernel.string=MRT-lavender™ Kernel by zackyma @ Telegram
 dev.string=@zacky_ma
 do.devicecheck=1
 do.modules=0
